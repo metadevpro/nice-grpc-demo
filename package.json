@@ -4,6 +4,7 @@
   "description": "Demo project with nice-grpc in TypeScript",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run generate",
     "generate": "grpc_tools_node_protoc --proto_path=./proto --ts_proto_out=./compiled_proto --ts_proto_opt=outputServices=nice-grpc,outputServices=generic-definitions,useExactTypes=false ./proto/example.proto",
     "server": "ts-node server.ts",
     "client": "ts-node client.ts"
